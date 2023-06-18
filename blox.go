@@ -42,11 +42,9 @@ func (k *App) ServerDiscordToRoblox(DiscordID, GuildID string) (data Roblox, err
 		switch resp.StatusCode {
 		case 200:
 			json.Unmarshal(res, &data)
-
 			var Check map[string]any = make(map[string]any)
 			json.Unmarshal(res, &Check)
 			data.Resolved.Roblox.Groupsv2 = CheckForPremium(Check)
-
 			return
 		case 404:
 			json.Unmarshal(res, &err)
