@@ -1,4 +1,4 @@
-\package GoBlox
+package GoBlox
 
 import "time"
 
